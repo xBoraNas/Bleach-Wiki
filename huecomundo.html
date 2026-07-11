@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hueco Mundo - Bleach Wiki</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="topbar">
+        <h1 id="webpage-title" data-key="web-title">BLEACH WIKI</h1>
+        <nav id="main-navigation">
+            <a href="index.html" class="passive" data-key="nav-home">Home</a> 
+            <a href="humanworld.html" class="passive" data-key="nav-human">Human World</a> 
+            <a href="soulsociety.html" class="passive" data-key="nav-society">Soul Society</a> 
+            <a href="huecomundo.html" class="active" data-key="nav-hueco">Hueco Mundo</a> 
+            <a href="form.html" class="passive" data-key="nav-form">Form</a>
+        </nav>
+    </header>
+
+    <div id="tools-section">
+        <div id="utility-container" class="collapsed">
+            <div id="utility-content">
+                <a href="#main-content" class="skip-link-btn" data-key="skip-text">Skip to Content</a>
+                <div class="lang-switch">
+                    <button class="lang-btn" id="btn-tr">TR</button>
+                    <button class="lang-btn active-lang" id="btn-en">EN</button>
+                </div>
+                <div class="font-tools">
+                    <button class="tool-btn" id="font-up">A+</button>
+                    <button class="tool-btn" id="font-down">A-</button>
+                    <button class="tool-btn" id="dark-mode-toggle">🌙</button>
+                </div>
+            </div>
+            <button id="utility-toggle">
+                <span class="icon">⚙️</span>
+                <span class="text" data-key="settings-text">Settings</span>
+            </button>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <section id="page-header">
+            <h2 id="main-title" data-key="nav-hueco">Hueco Mundo</h2>
+            <hr id="title-divider">
+        </section>
+
+        <div class="world-intro">
+            <p class="content-text" data-key="hueco-intro">
+                <strong>Hueco Mundo</strong>, the world of the Hollows, is a hauntingly beautiful dimension of eternal night. Located between the Human World and the Soul Society, it is a vast, barren desert of endless white sand, dotted with quartz-like trees. This is a realm where only the strong survive, ruled by the Arrancars—Hollows who have torn off their masks to gain Shinigami-like powers. At the heart of this desolate landscape stands Las Noches, a massive fortress that serves as the base for Aizen’s army of Espada. In Hueco Mundo, the moon never sets, and the air is thick with spiritual pressure, creating a world of constant hunger and lethal elegance.
+            </p>
+        </div>
+
+        <div id="character-content" class="reverse">
+            <article class="info-side">
+                <div class="char-header">
+                    <h3 class="char-name">Grimmjow Jaegerjaquez</h3>
+                    <p class="cv-text">CV: Junichi Suwabe</p>
+                </div>
+                <p class="char-description" data-key="char-grimmjow-desc">
+                    The 6th Espada in Sōsuke Aizen's army of Arrancars. Known for his violent, impulsive, and hot-headed personality, he is a warrior driven by a primal instinct to fight and prove his dominance.
+                </p>
+                <div class="profile-section">
+                    <h4 class="section-title" data-key="profile-title">Profile Data</h4>
+                    <hr class="section-divider">
+                    <table class="profile-table right-label">
+                        <tr>
+                            <td class="value" data-key="val-grimmjow-birthday">July 31</td>
+                            <td class="label" data-key="label-birthday">Birthday</td>
+                        </tr>
+                        <tr>
+                            <td class="value">Pantera</td>
+                            <td class="label" data-key="label-power">Power</td>
+                        </tr>
+                        <tr>
+                            <td class="value">186 cm</td>
+                            <td class="label" data-key="label-height">Height</td>
+                        </tr>
+                        <tr>
+                            <td class="value">Espada</td>
+                            <td class="label" data-key="label-affiliation">Affiliation</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+            <aside class="image-side">
+                <figure>
+                    <img src="images/grimmjow.png" alt="Illustiration of Grimmjow Jaegerjaquez">
+                    <figcaption>The 6th Espada: Grimmjow</figcaption>
+                </figure>
+            </aside>
+        </div>
+
+        <section id="special-attacks">
+            <h3 class="attacks-title" data-key="attacks-title">Special Attacks</h3>
+            <hr class="attacks-divider">
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <video controls poster="images/GranReyCerophoto.png">
+                            <source src="videos/GranReyCero.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="video-caption">Gran Rey Cero</p>
+                </div>
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <video controls poster="images/DesgarronPhoto.png">
+                            <source src="videos/Desgarron.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="video-caption">Desgarron</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="main-footer">
+            <section id="external-links">
+                <h3 id="external-title" data-key="explore-more">Explore More:</h3>
+                <div id="external-link-p"> 
+                    <a href="https://www.viz.com/bleach" target="_blank">Viz Media</a>| 
+                    <a href="https://bleach-anime.com/" target="_blank">Official Anime Site</a>| 
+                    <a href="https://bleach.fandom.com/" target="_blank">Bleach Wiki</a>
+                </div>
+            </section>
+            <p>&copy; 2026 Bleach Wiki - Created by Bora Nas</p>
+            <p>All characters and images are property of Tite Kubo / Shueisha.</p>
+        </footer>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

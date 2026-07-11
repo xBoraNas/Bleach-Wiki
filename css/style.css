@@ -1,0 +1,1410 @@
+/* Main Html Setting */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Sağa kaymayı kesin olarak durdurur */
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #ffffff;
+    margin: 0;
+    font-family: 'Libre Baskerville', serif;
+    /* padding: 30px; */
+}
+
+h1, h2, h3, .char-name {
+    font-family: 'Permanent Marker', cursive;
+}
+
+p, .cv-text, .footer p, table {
+    font-family: Arial, Helvetica, sans-serif; /* Küçük yazılar için temiz sans-serif */
+    font-size: 1rem;
+}
+
+/* Topbar Code Css */
+#topbar {
+    background-color: #f9f9f9; /* Kenarlara değdiğinde boşluk görünmemesi için */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Üst-alt 20px, sağ-sol 40px (yazılar yapışmasın diye) */
+    border-bottom: 2px solid black; /* İstediğin o tam genişlikteki çizgi */
+    margin-bottom: 10px;
+    font-size: 18px;
+    width: 100%; /* Ekranı kaplamasını sağlar */
+    box-sizing: border-box; /* Padding genişliği bozmasın diye */
+}
+
+#topbar #webpage-title {
+    font-family: 'Permanent Marker', cursive;
+    line-height: 1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#topbar #main-navigation a {
+    text-decoration: none;
+    color: black;
+    margin-left: 25px;
+    transition: color 0.3s;
+    font-family: 'Libre Baskerville', serif;
+}
+
+#topbar #main-navigation a.active {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#topbar #main-navigation a.passive {
+    color: black;
+}
+
+#topbar #main-navigation a:hover {
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Main Block of the Code */
+#main-content {
+    /* border: 2px solid black; */
+    /* border-radius: 15px; */
+    padding: 20px;
+    background-color: #ffffff;
+    /* box-shadow: 0 10px 30px rgba(0,0,0,0.1); */
+}
+
+#main-content #page-header {
+    margin-bottom: 30px;
+}
+
+#main-content #main-title {
+    font-family: 'Permanent Marker', cursive;
+    line-height: 1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#main-content #title-divider {
+    border-top: 2px solid black;
+    margin: 15px 0;
+}
+#title-divider {
+    width: 100% !important;
+    margin: 15px 0 !important;
+}
+
+#main-content .content-text {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #000000;
+    text-align: left;
+}
+
+#main-content #info-sidebar p {
+    margin-top: 20px;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 40px;
+}
+
+/* Index html - Media Section */
+
+#media-section #main-image-placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0 auto 40px;
+    width: 100%;
+    height: 700px;
+    border: 0.5px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+#media-section #main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* World Cards Section */
+#world-cards-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+#world-cards-container .world-card {
+    width: 30%; 
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Libre Baskerville', serif;
+}
+
+#world-cards-container .world-card p {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+#world-cards-container .world-card .world-card-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#world-cards-container .world-card .world-card-link:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+#world-cards-container .image-mask {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden; /* Taşmaları keser, zoomun dışarı çıkmasını engeller */
+    border: 0.5px solid black;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+#world-cards-container .card-image {
+    width: 100%;            
+    height: 100%;
+    object-fit: cover;      /* Alanı kaplamasını sağlar */
+    display: block;         
+    transform: scale(1.6);  /* İSTEDİĞİN ZOOM: 1.6 kat yakınlaştırır */
+    object-position: 50% 50%; /* Merkeze odaklar */
+    transition: transform 0.3s ease; 
+    cursor: pointer;
+}
+
+#world-cards-container .card-image:hover {
+    transform: scale(1.7); 
+}
+
+/* External Link Section */
+#external-links {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #444; /* Görsel ayrım için */
+}
+
+#external-links #external-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.4rem;
+    color: #333; /* Bleach kırmızısı (Daha iyi kontrast) */
+    margin-bottom: 20px;
+}
+
+#external-links #external-link-p {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Mobilde alt alta geçmesi için - Madde 9 */
+}
+
+#external-links #external-link-p a {
+    text-decoration: underline; 
+    color: #df4242;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#external-links #external-link-p a:hover {
+    color: #000000;
+    text-decoration: none; 
+}
+
+#external-link-p a:link {
+    color: #df4242 !important;
+}
+
+#external-link-p a:visited {
+    color: #000000 !important;
+}
+
+#external-link-p a:hover {
+    color: #000000 !important;
+}
+#external-link-p a:visited, .world-card-link:visited {
+    color: #7b1f1f; /* Daha koyu/farklı bir kırmızı veya mor tonu */
+}
+
+#external-link-p a:link, .world-card-link:link {
+    color: #d32f2f;
+}
+
+
+
+/* Footer Section */
+#main-footer {
+    width: auto;
+    margin: 80px -40px 0 -40px; 
+    padding: 0;
+    border-top: 0.5px solid #666;
+    text-align: center;
+}
+
+#main-footer p {
+    font-family: sans-serif;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Worlds Html - Character Content */
+#character-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 40px;
+    align-items: flex-start;
+}
+
+#character-content .info-side {
+    flex: 1.5;
+}
+
+#character-content .char-name {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#character-content .cv-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#character-content .char-description {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+#character-content .section-title {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+#character-content .section-divider {
+    border: none;
+    border-top: 2px solid black;
+    margin: 10px 0 20px 0;
+}
+
+#character-content .profile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#character-content .profile-table td {
+    padding: 12px;
+    border-bottom: 2px solid #ccc;
+    font-family: sans-serif;
+}
+
+#character-content .profile-table .label {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    width: 30%;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+#character-content .audio-box {
+    margin-top: 40px;
+    padding: 0px;
+}
+
+#character-content .image-side {
+    flex: 1;
+    border: 0.5px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#character-content .image-side img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Special Attacks Section */
+#special-attacks {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#special-attacks .attacks-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#special-attacks .attacks-divider {
+    border: none;
+    border-top: 2px solid black;
+    margin-bottom: 30px;
+}
+
+#special-attacks .video-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#special-attacks .video-item {
+    flex: 1;
+    text-align: center;
+}
+
+#special-attacks .video-wrapper {
+    border: 2px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #000;
+    aspect-ratio: 16 / 9;
+}
+
+#special-attacks .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#special-attacks .video-caption {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+}
+
+/* Allies Table Section */
+#allies-section {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+#allies-section .allies-title {
+    font-family: 'Permanent Marker', cursive;        
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#allies-section #table-details {
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 20px;
+}
+
+#allies-section #table-caption {
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#allies-section .allies-divider {
+    border: none;
+    border-top: 2px solid #000000;
+    margin-bottom: 25px;
+}
+
+#allies-section .allies-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+#allies-section .allies-table th {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    vertical-align: middle;
+}
+
+#allies-section .allies-table td {
+    padding: 15px;
+    border-bottom: 2px solid #eee;
+    color: #000000;
+    text-align: center;
+}
+
+#allies-section .allies-table td:first-child {
+    font-weight: bold;
+}
+
+#allies-section .allies-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Hueco Mundo Reverse Section */
+#character-content.reverse {
+    flex-direction: row-reverse;
+}
+
+#character-content.reverse .right-label .label {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    width: 35%;
+    text-align: center;
+    border-left: 2px solid white;
+}
+
+#character-content.reverse .right-label .value {
+    text-align: right;
+    padding-right: 15px;
+}
+
+/* Form Page Section */
+#form-container {
+    display: flex !important;
+    justify-content: center !important; /* İçindeki contact-box'ı yatayda tam ortalar[cite: 6] */
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+    background-image: url('../images/Background.png'); /* Görsel ismine dikkat[cite: 6] */
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+#form-container .contact-box {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+#form-container .form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#form-container .form-header h3, 
+#form-container .form-header h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+}
+
+#form-container .form-header p {
+    margin-top: 10px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+#form-container .form-group {
+    margin-bottom: 40px;
+}
+
+#form-container .form-group label, 
+#form-container .form-group .label-style {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#form-container .form-group input[type="text"], 
+#form-container .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#form-container .radio-group, 
+#form-container .checkbox-group label {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+#form-container .radio-group input[type="radio"], 
+#form-container .checkbox-group label input[type="checkbox"] {
+    margin: 0; 
+    padding: 0;
+    cursor: pointer;
+    vertical-align: middle; 
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0; 
+}
+
+#form-container .radio-group label,
+#form-container .checkbox-group label {
+    display: inline-block;
+    margin: 0;
+    line-height: 1; 
+    cursor: pointer;
+}
+
+#form-container .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#form-container .form-buttons button {
+    flex: 1;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+#form-container .btn-submit {
+    background-color: black;
+    color: white;
+}
+
+#form-container .btn-submit:hover {
+    background-color: #333;
+}
+
+#form-container .btn-reset {
+    background-color: white;
+    color: black;
+}
+
+#form-container .btn-reset:hover {
+    background-color: #eee;
+}
+
+#form-container .checkbox-group {
+    display: block;
+}
+
+#form-container .checkbox-group label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.video-description summary:hover {
+    color: #df4242; /* Üstüne gelince Bleach kırmızısı olsun */
+}
+
+.video-description p {
+    margin-top: 10px;
+    color: black;
+    line-height: 1.4;
+}
+
+/* Modal (Görüntü Arka Planı) */
+.modal {
+    display: none; /* Varsayılan olarak gizli */
+    position: fixed; 
+    z-index: 1000; /* Her şeyin üstünde durması için */
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); /* Siyah transparan arka plan */
+}
+
+/* Modal İçeriği (Resim) */
+.modal-content-wrapper {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.modal-content {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid white;
+}
+
+/* Alt Yazı (Caption) */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Kapatma Butonu (X) */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #df4242;
+    text-decoration: none;
+}
+
+/* Mobil Uyumluluk */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   UTILITY CONTAINER - TAM ÇÖZÜM
+   ========================================= */
+
+#tools-section {
+    display: flex;
+    justify-content: flex-start; 
+    padding: 10px;
+    height: 40px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#utility-container {
+    display: flex;
+    /* ÖNEMLİ: Buton en solda kalsın diye row-reverse yapıyoruz */
+    flex-direction: row-reverse; 
+    align-items: center;
+    justify-content: flex-end; /* Butonu başlangıç noktasına yaslar */
+    background: white;
+    border-bottom: 2px solid black;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    padding: 2px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    width: 135px;
+}
+
+#utility-container.expanded {
+    width: 550px; 
+    /* box-shadow: 0 4px 15px rgba(0,0,0,0.2); */
+}
+
+#utility-toggle {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 10px 15px;
+    flex-shrink: 0;
+    width: 135px; /* Container kapalıyken alanı doldurur */
+    outline: none;
+}
+
+#utility-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    visibility: hidden;
+    padding-right: 15px; /* Butonla içerik arasına boşluk */
+    transition: opacity 0.3s ease;
+}
+
+#utility-container.expanded #utility-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.skip-link-btn {
+    background-color: #df4242; /* Bleach Kırmızısı */
+    color: white !important; /* Morarmayı engeller */
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: sans-serif;
+    transition: background 0.3s ease;
+    border: none;
+}
+
+.skip-link-btn:hover {
+    background-color: #000000;
+    color: white !important;
+}
+
+.lang-btn, .tool-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Libre Baskerville', serif;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+/* Üstüne gelince efekt */
+.lang-btn:hover, .tool-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Seçili olan dil butonu (EN genelde aktiftir) */
+.active-lang {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #000000;
+}
+
+/* Font araçları ve Dil araçları arası mesafe */
+.lang-switch, .font-tools {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Linklerin morarmasını genel olarak engellemek istersen */
+#utility-content a, 
+#utility-content a:visited {
+    color: white;
+}
+
+
+/* Printable  */
+/* =========================================
+   YAZDIRMA (PRINT) AYARLARI
+   ========================================= */
+@media print {
+    /* Resmin kağıda sığması ve kesilmemesi için */
+    .world-card img, 
+    .image-side img {
+        width: auto !important; /* Genişliği içeriğe göre ayarla */
+        max-width: 100% !important; /* Kağıt genişliğini asla geçme */
+        max-height: 400px !important; /* Resmin çok uzun olup sayfayı taşmasını engelle */
+        height: auto !important;
+        display: block !important;
+        margin: 10px auto !important; /* Ortala */
+        object-fit: contain !important; /* Resmi bozmadan kutuya sığdır */
+    }
+
+    /* Resmin etrafındaki gereksiz boşlukları (padding/margin) sıfırla */
+    .world-card, .image-side {
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+
+    /* Sayfa kenarlarındaki taşmaları önlemek için ana kapsayıcıyı zorla */
+    #main-content {
+        overflow: visible !important;
+        width: 100% !important;
+    }
+}
+
+
+
+/* =========================================
+   TAM GÖRSEL UYUMLU FORM TASARIMI
+   ========================================= */
+
+/* Kriter: Orantısal Boyutlandırma İçin Kapsayıcı */
+#form-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+    background-image: url('../images/Background.jpg');
+    background-size:auto;
+    background-repeat: no-repeat;
+}
+
+/* Ana Form Kutusu (Görseldeki gibi kenarlıklı) */
+.contact-box {
+    background-color: #ffffff;
+    border: 2px solid #000 !important;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%; /* Kutunun genişliği */
+    max-width: 850px; /* Çok yayılmaması için sınır */
+    box-sizing: border-box; /* Padding'in genişliği bozmasını engeller */
+    margin: 0 auto !important; /* Yatayda ortalamayı garanti eder */
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h4 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.form-header-p {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Form Grupları ve Etiketler */
+.form-group {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.form-group label, .label-style {
+    display: block;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    text-align: left;
+}
+/* Radio ve Checkbox Alanları */
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-check-label {
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    border: 1.5px solid #000 !important;
+}
+
+/* Butonlar (Görseldeki gibi yan yana) */
+.form-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-submit {
+    flex: 1;
+    background-color: #000 !important;
+    color: #fff !important;
+    border: 2px solid #000 !important;
+    padding: 12px !important;
+    font-weight: bold;
+    border-radius: 8px !important;
+    transition: 0.3s;
+}
+
+.btn-reset {
+    flex: 1;
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
+    padding: 12px !important;
+    font-weight: bold;
+    border-radius: 8px !important;
+    transition: 0.3s;
+}
+
+
+
+
+
+/* =========================================
+   KRİTER: RESPONSIVE DÜZENLEME (3 Layout)
+   ========================================= */
+
+/* Tablet Düzeni (İçerik biraz daralır) */
+@media (max-width: 992px) {
+    .contact-box {
+        padding: 30px;
+    }
+}
+
+/* Smartphone Düzeni (Single Column - Tek Sütun) */
+@media (max-width: 600px) {
+    .contact-box {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .form-buttons {
+        flex-direction: column; /* Mobilde butonlar alt alta */
+        gap: 10px;
+    }
+
+    .radio-group {
+        flex-direction: column; /* Mobilde seçenekler alt alta */
+        gap: 10px;
+    }
+}
+
+/* 1. Başlık altındaki çizginin (hr) tam yayılması */
+#main-content #title-divider {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 15px 0 !important;
+    border-top: 2px solid black !important;
+    opacity: 1; /* Bootstrap bazen şeffaflaştırır */
+}
+
+
+
+/* 3. Main Content'in Bootstrap Container'ını Sıfırlama */
+#main-content.container-fluid {
+    padding-left: 40px !important; /* Sayfanın en dışındaki boşluk */
+    padding-right: 40px !important;
+}
+
+/* 4. İçerideki Form Elemanları (İsim ve Soru) Yan Yana Kalsın */
+.form-group-row {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .form-group-row {
+        flex-direction: column; /* Mobilde alt alta döner */
+    }
+}
+
+/* Sadece Form sayfasında Settings ile Form arasını açar */
+#form-container {
+    margin-top: 60px !important;
+}
+
+/* Sayfa başlığındaki 'Form' yazısının üstündeki boşluğu da dengeler */
+#main-content #page-header {
+    padding-top: 20px !important;
+}
+
+
+@media print {
+    /* Madde 19: Yazdırırken gereksiz olan her şeyi gizle */
+    #topbar, 
+    #nav-wrapper, 
+    #tools-section, 
+    #utility-toggle, 
+    #imageModal, 
+    video, 
+    audio, 
+    button, 
+    .close,
+    .audio-box,
+    .video-wrapper {
+        display: none !important;
+    }
+
+    /* Senin mevcut kodun buradaki düzenlemelerle devam etsin */
+    body {
+        background: white !important;
+        color: black !important;
+        padding: 0 !important;
+    }
+
+    #main-content #title-divider {
+        width: 100% !important;
+        border-top: 2px solid black !important;
+    }
+
+   
+
+    /* Resimlerin sayfadan taşmasını önle */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+
+
+/* =========================================
+   TEMİZLENMİŞ VE GÜNCELLENMİŞ DARK MODE
+   ========================================= */
+
+body.dark-theme {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* Header & Navigasyon */
+.dark-theme #topbar {
+    background-color: #1a1a1a !important;
+    border-bottom: 2px solid #444 !important;
+}
+.dark-theme #topbar #main-navigation a {
+    color: #ffffff !important;
+}
+
+/* Genel Metinler ve Sidebar */
+.dark-theme #main-content { background-color: #121212 !important; }
+.dark-theme #main-title,
+.dark-theme .content-text, 
+.dark-theme #info-sidebar p,
+.dark-theme #info-sidebar span,
+.dark-theme #info-sidebar strong {
+    color: #f0f0f0 !important;
+}
+.dark-theme #title-divider { border-top: 2px solid #555 !important; }
+
+/* DÜNYA KARTLARI (Index) */
+.dark-theme #world-cards-container {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333 !important;
+}
+.dark-theme .world-card-link { color: #ffffff !important; }
+
+/* TABLOLAR (Human World) */
+.dark-theme .allies-table {
+    background-color: #1e1e1e !important;
+    border: 1px solid #444 !important;
+}
+.dark-theme .allies-table td {
+    border-bottom: 1px solid #444 !important;
+    color: #f0f0f0 !important;
+}
+.dark-theme #table-caption, .dark-theme .allies-title { color: #ffffff !important; }
+
+/* VİDEO VE CV DETAYLARI */
+.dark-theme .video-description p { color: #e0e0e0 !important; }
+.dark-theme .cv-text { color: #bbbbbb !important; }
+.dark-theme .attacks-divider, .dark-theme .allies-divider, .dark-theme .section-divider {
+    border-top: 1px solid #444 !important;
+}
+.dark-theme summary { color: #ffffff !important; }
+
+/* =========================================
+   FORM SAYFASI KESİN ÇÖZÜM (TEKRARLAR SİLİNDİ)
+   ========================================= */
+
+/* Beyaz parlamayı silen tek ve güçlü blok */
+body.dark-theme {
+    background-color: #1a1d20 !important; 
+    border: 2px solid #333 !important; 
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Form içindeki başlık ve açıklamalar */
+body.dark-theme .form-header h4,
+body.dark-theme .form-header-p,
+body.dark-theme label,
+body.dark-theme .label-style,
+body.dark-theme .form-check-label {
+    color: #ffffff !important;
+}
+
+/* Input ve Textarea alanları */
+body.dark-theme .form-control {
+    background-color: #2b3035 !important;
+    border: 1.5px solid #495057 !important;
+    color: #ffffff !important;
+}
+
+/* Butonlar */
+.dark-theme .btn-reset, .dark-theme .btn-outline-dark {
+    background-color: #333 !important;
+    color: #fff !important;
+    border-color: #555 !important;
+}
+
+/* SETTINGS (Utility) */
+body.dark-theme #utility-container, 
+body.dark-theme #utility-content {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+}
+body.dark-theme #utility-toggle,
+body.dark-theme .lang-btn, 
+body.dark-theme .tool-btn {
+    color: #ffffff !important;
+}
+body.dark-theme .tool-btn, body.dark-theme .lang-btn {
+    background-color: #3d3d3d !important;
+}
+
+/* FOOTER */
+.dark-theme #main-footer {
+    background-color: #121212 !important;
+    border-top: 1px solid #444 !important;
+}
+.dark-theme #external-links #external-title { color: #efeded !important; }
+.dark-theme #external-links #external-link-p a { color: #ea4949 !important; }
+.dark-theme #main-footer p { color: white !important; }
+
+/* 1. Kapsayıcıdaki her türlü gizli beyazlığı siliyoruz */
+body.dark-theme #main-content, 
+body.dark-theme #form-container,
+body.dark-theme .row {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 2. Formun dışındaki o beyaz şeridi yok etmek için */
+body.dark-theme .contact-box {
+    background-color: #1a1d20 !important; 
+    border: 2px solid #333 !important; /* Beyaz yerine çok koyu bir gri */
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    outline: none !important;
+    margin: 0 auto !important; /* Kaymaları önlemek için */
+}
+
+/* 3. Sayfa genelindeki olası beyaz taşmaları engelle */
+body.dark-theme {
+    background-color: #121212 !important;
+    overflow-x: hidden;
+}
+
+/* 1. Form başlığının altındaki o siyah kalan çizgiyi beyazlat */
+body.dark-theme #main-content #title-divider {
+    border-top: 2px solid #ffffff !important;
+    opacity: 1 !important; /* Görünürlüğü garantilemek için */
+}
+
+/* 2. Footer'ın hemen üzerindeki o siyah kalan çizgiyi beyazlat */
+body.dark-theme #main-footer {
+    border-top: 1px solid #ffffff !important;
+}
+
+/* 3. Eğer formun en altındaki (butonlardan önceki) çizgiler de siyahsa */
+body.dark-theme hr {
+    border-top: 1px solid #ffffff !important;
+    opacity: 0.8;
+}
+
+/* Dark Mode tablo satırı hover efekti */
+body.dark-theme .allies-table tbody tr:hover {
+    background-color: #333333 !important; /* Daha koyu bir gri */
+    cursor: pointer;
+}
+
+/* Hover yapıldığında yazıların renginin beyaz kalmaya devam ettiğinden emin olalım */
+body.dark-theme .allies-table tbody tr:hover td {
+    color: #ffffff !important;
+}
+
+/* Dark Mode'da input ve textarea içindeki ipucu yazılarını (placeholder) parlat */
+body.dark-theme input::placeholder,
+body.dark-theme textarea::placeholder {
+    color: #aaaaaa !important; /* Açık gri, okunabilir bir ton */
+    opacity: 1; /* Bazı tarayıcılar şeffaflaştırır, bunu engelliyoruz */
+}
+
+/* Internet Explorer ve Edge eski sürümleri için */
+body.dark-theme input:-ms-input-placeholder,
+body.dark-theme textarea:-ms-input-placeholder {
+    color: #aaaaaa !important;
+}
+
+/* Safari ve Chrome eski sürümleri için */
+body.dark-theme input::-webkit-input-placeholder,
+body.dark-theme textarea::-webkit-input-placeholder {
+    color: #aaaaaa !important;
+}
+
+/* Dark Mode'da Seçili Dil Butonu (TR/EN) */
+body.dark-theme .active-lang {
+    background-color: #ff4d4d !important; /* Belirgin bir kırmızı */
+    color: #ffffff !important;           /* Yazı beyaz kalsın */
+    border-color: #ff4d4d !important;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5); /* Hafif bir parlama efekti */
+}
+
+/* Dark Mode'da seçili olmayan butonların üzerine gelince */
+body.dark-theme .lang-btn:not(.active-lang):hover, 
+body.dark-theme .tool-btn:hover {
+    background-color: #444 !important;
+    color: #ff4d4d !important;
+}
+
+/* =========================================
+   FORM SAYFASI ÖZEL TASARIM (BOOTSTRAP'SİZ)
+   ========================================= */
+
+
+
+
+
+.form-header h4 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.form-header-p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Alanları sarmalayan yapı */
+.form-fields-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* Her bir giriş grubu */
+.field-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 25px); /* Yan yana iki sütun ayarı */
+    min-width: 300px;
+}
+
+/* Mesaj ve Checkbox gibi tam genişlikteki alanlar */
+.full-width {
+    flex: 1 1 100% !important;
+}
+
+.field-group label, .label-style {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Input ve Textarea Stilleri */
+.form-control {
+    border: 1.5px solid #000 !important;
+    border-radius: 6px !important;
+    padding: 12px !important;
+    font-family: Arial, sans-serif;
+}
+
+/* Buton Grubu */
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-submit {
+    flex: 1;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover { background-color: #333; }
+
+.btn-reset {
+    flex: 1;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-reset:hover { background-color: #f0f0f0; }
+
+/* =========================================
+   KRİTER: 3 FARKLI LAYOUT (MEDIA QUERIES)
+   ========================================= */
+
+/* 1. TABLET DÜZENİ (991px ve altı) */
+@media (max-width: 991px) {
+    .contact-box {
+        max-width: 700px;
+        padding: 30px;
+    }
+    .field-group {
+        flex: 1 1 100%; /* Tabletlerde de tek sütuna düşebilir veya ihtiyaca göre kalabilir */
+    }
+}
+
+/* 2. SMARTPHONE DÜZENİ (600px ve altı) - KESİN TEK SÜTUN */
+@media (max-width: 600px) {
+    #form-container {
+        padding: 10px; /* Kenar boşluklarını daralt */
+    }
+    .contact-box {
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .form-fields-wrapper {
+        display: block; /* Flex'i iptal et, her şeyi alt alta diz */
+    }
+    .field-group {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+    .form-buttons {
+        flex-direction: column; /* Butonlar da alt alta */
+    }
+    #webpage-title {
+        font-size: 1.5rem !important; /* Başlık mobilde küçülsün */
+    }
+}
+
+/* Dark Mode ile olan uyumu koruyoruz */
+body.dark-theme .contact-box {
+    background-color: #1a1d20 !important;
+    border-color: #333 !important;
+    box-shadow: none !important;
+}
+
+body.dark-theme .form-header-p { color: #aaa !important; }
